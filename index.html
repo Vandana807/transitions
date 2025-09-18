@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>document</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.navbar {
+  background-color: #b22222;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+.navbar-logo img {
+  height: 50px;
+  margin-right: 20px;
+}
+.navbar-item {
+  position: relative;
+  padding: 14px 20px;
+  color: white;
+  cursor: pointer;
+}
+.navbar-item:hover {
+  background-color: #8b0000;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 500;
+}
+.hover-content {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 250px;
+  max-width: 400px;
+  background: #fff;
+  color: #000; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  padding: 20px;
+  z-index: 1000;
+  text-align: left;
+}
+.navbar-item:hover .hover-content {
+  display: block;
+}
+.navbar-item:hover ~ .overlay {
+  display: block;
+}
+.hover-content img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.hover-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.hover-content ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  color: #000; 
+  font-weight: bold;
+  font-size: 16px;
+}
+.hover-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.hover-content p {
+  margin: 5px 0;
+}
+h1{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="overlay"></div>
+<div class="navbar">
+  <div class="navbar-logo">
+    <img src="https://logowik.com/content/uploads/images/restaurant9491.logowik.com.webp" alt="Restaurant Logo" />
+  
+  </div>
+  <div class="navbar-item">
+    Home
+    <div class="hover-content">
+      <h1>Welcome</h1>
+      <img src="https://rishikeshcamps.in/wp-content/uploads/2023/05/restaarant.jpg" alt="Restaurant Image">
+    </div>
+  </div>
+  <div class="navbar-item">
+    Menu
+    <div class="hover-content">
+      <h3>Our Menu</h3>
+      <ul>
+        <li>Starters</li>
+        <li>Main Course</li>
+        <li>Desserts</li>
+        <li>Drinks</li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-item">
+    About
+    <div class="hover-content">
+      <p>Family-owned restaurant serving delicious meals since 1995.</p>
+    </div>
+  </div>
+  <div class="navbar-item">
+    Contact
+    <div class="hover-content">
+      <p>Email: info@restaurant.com</p>
+      <p>Phone: +91 123 456 7890</p>
+      <p>Address: 456 Culinary Avenue, Tasteville, India</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
